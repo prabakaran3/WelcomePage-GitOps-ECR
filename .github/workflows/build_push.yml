@@ -6,9 +6,8 @@ on:
     - main
   pull_request:
     branches:
-    - test
     - main
-    types: [opened, synchronize, reopened]
+    
     
 jobs:
   build-and-push:
