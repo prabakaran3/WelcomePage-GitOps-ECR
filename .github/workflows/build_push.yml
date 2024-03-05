@@ -20,7 +20,7 @@ jobs:
       - name: Login to AWS ECR
         id: login-ecr
         run: |
-          docker login -u AWS -p $(aws ecr get-login-password --region ap-south-1)  934101640313.dkr.ecr.ap-south-1.amazonaws.com/mapup_assessment
+          docker login -u AWS -p $(aws ecr get-login-password --region ap-south-1)  349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello_world
         env:
           TOKEN: ${{ secrets.TOKEN }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -29,5 +29,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t hello_world .
-          docker tag hello_world:latest 934101640313.dkr.ecr.ap-south-1.amazonaws.com/mapup_assessment:hello-world
-          docker push 934101640313.dkr.ecr.ap-south-1.amazonaws.com/mapup_assessment:hello-world
+          docker tag hello_world:latest 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello_world:hello-world
+          docker push 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello_world:hello-world
