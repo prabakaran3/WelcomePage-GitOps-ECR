@@ -25,7 +25,7 @@ Install aws cli and configure. Once configured run the below cli command to auth
 
     docker build -t hello_world:latest .  -->  To build the application
 
-    docker tage hello_world:latest 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello_world:hello-world
+    docker tag hello_world:latest 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello_world:hello-world
 
     docker push 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello_world:hello-world
 
