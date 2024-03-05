@@ -20,7 +20,7 @@ jobs:
       - name: Login to AWS ECR
         id: login-ecr
         run: |
-          docker login -u AWS -p $(aws ecr get-login-password --region ap-south-1)  public.ecr.aws/b3n7j6v1/hello
+          aws ecr-public get-login-password --region ap-south-1 | docker login --username AWS --password-stdin public.ecr.aws/b3n7j6v1
         env:
           TOKEN: ${{ secrets.TOKEN }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
