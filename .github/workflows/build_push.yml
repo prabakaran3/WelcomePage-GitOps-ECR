@@ -29,5 +29,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t hello .
-          docker tag hello:latest 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello:hello
-          docker push 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello:hello
+          docker tag hello:latest 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello_world:hello
+          docker push 349734401792.dkr.ecr.ap-south-1.amazonaws.com/hello_world:hello
