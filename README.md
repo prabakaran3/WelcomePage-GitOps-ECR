@@ -1,6 +1,6 @@
 In this example, I have explained how to dockerize an nodejs application, Push an latest image to AWS ECR repository via GitOps and we run the application with the latest Image.
 
-# Sample Welcome Page
+# Welcome Page
 
 In this repository we have simple node.js app that servers "WelcomePage"
 
