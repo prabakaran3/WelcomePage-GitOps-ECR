@@ -68,8 +68,11 @@ Workflow yaml file
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
 
       - name: Build and push Docker image
-        run: |
-          docker build -t hello .
-          docker tag hello:latest public.ecr.aws/b3n7j6v1/hello:hello
-          docker push public.ecr.aws/b3n7j6v1/hello:hello
+
+# You can also check the changes in your local by using below docker commands
+
+        docker pull public.ecr.aws/b3n7j6v1/hello:hello
+        docker run -d -p 3000:3000 public.ecr.aws/b3n7j6v1/hello:hello
+
+          
 
